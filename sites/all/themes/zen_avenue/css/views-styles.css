@@ -1,0 +1,76 @@
+/**
+ * @file
+ * Views Styling
+ */
+
+/*
+ * Flexslider (Featured Attendees View)
+ *
+ */
+.view-attendees-featured .flexslider .slides > li { margin-right: 10px }
+.view-attendees-featured .flexslider {
+  margin: 0 0 -10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none
+}
+.view-attendees-featured .flex-direction-nav a {
+  width: 30px;
+  height: 30px;
+  margin: -20px 0 0;
+  top: 45%
+}
+.view-attendees-featured .flex-direction-nav a:before { font-size: 23px }
+
+/*
+ * Views' admin tabs
+ *
+ * The views admin tabs use the same classes as the secondary tabs. We prevent
+ * some of our tab styling from bleeding into (and breaking) the Views admin
+ * pages. If your sub-theme isn't used for admin pages, you can remove this
+ * entire section.
+ */
+
+.views-displays .secondary li {
+  float: none;
+  margin: 0 6px 0;
+}
+
+.views-displays .secondary a:link,
+.views-displays .secondary a:visited {
+  text-shadow: none;
+  padding: 2px 7px 3px;
+}
+
+.views-displays .secondary .open > a {
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
+}
+
+.views-displays .secondary .open > a:hover {
+  color: #333;
+}
+
+.views-displays .secondary .action-list li {
+  margin: 0;
+}
+
+.views-displays .secondary .action-list li:first-child {
+  -webkit-border-radius: 0 7px 0 0;
+  -moz-border-radius: 0 7px 0 0;
+  -ms-border-radius: 0 7px 0 0;
+  -o-border-radius: 0 7px 0 0;
+  border-radius: 0 7px 0 0;
+}
+
+.views-displays .secondary .action-list li:last-child {
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  -ms-border-radius: 0 0 7px 7px;
+  -o-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
+}
