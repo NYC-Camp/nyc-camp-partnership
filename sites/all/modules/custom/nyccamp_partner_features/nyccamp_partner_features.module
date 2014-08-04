@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the NYC Camp Partner Features feature.
+ */
+
+include_once 'nyccamp_partner_features.features.inc';
