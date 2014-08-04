@@ -31,7 +31,8 @@ function drush_update_partnerships()
         "swag_benefit",
         "other_benefit",
     );
-    if(empty(libraries_detect("spyc")["installed"])) {
+    $lib_detect = libraries_detect("spyc");
+    if(empty($lib_detect["installed"])) {
         drush_log("Missing Spyc library.", "error");
         return;
     }
@@ -90,7 +91,8 @@ function drush_update_partnerships()
 
 function drush_update_benefits()
 {
-    if(empty(libraries_detect("spyc")["installed"])) {
+    $lib_detect = libraries_detect("spyc");
+    if(empty($lib_detect["installed"])) {
         drush_log("Missing Spyc library.", "error");
         return;
     }
