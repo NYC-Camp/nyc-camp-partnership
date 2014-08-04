@@ -195,11 +195,12 @@ function nyccamp_partner_load_partnership_options($type = '')
 function nyccamp_partner_extract_benefit($benefit)
 {
     $bwrapper = entity_metadata_wrapper("node", $benefit);
-    $return = "";
-    $return .= $bwrapper->field_benefit->value();
+    return $bwrapper->field_benefit->value();
+    // $return = "";
+    // $return .= $bwrapper->field_benefit->value();
     // @TODO: Determine if we actually need to print out the details part of the benefit.
-    if(!empty($bwrapper->field_details->value()) && FALSE) {
-        $return .= sprintf("<br>%s", $bwrapper->field_details->value());
-    }
-    return $return;
+    // if(!empty($bwrapper->field_details->value()) && FALSE) {
+    //     $return .= sprintf("<br>%s", $bwrapper->field_details->value());
+    // }
+    // return $return;
 }
