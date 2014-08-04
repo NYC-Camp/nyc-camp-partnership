@@ -1,0 +1,205 @@
+<?php
+
+/**
+ * Implements hook_libraries_info();
+ */
+function nyccamp_partner_libraries_info()
+{
+    $libraries['spyc'] = array(
+        'name' => 'Spyc (A simple YAML loader/dumper class for PHP)',
+        'vendor url' => 'https://github.com/mustangostang/spyc/',
+        'download url' => 'https://github.com/mustangostang/spyc/releases',
+        'version arguments' => array(
+            'file' => 'spyc.php',
+            'pattern' => '@version\s+([0-9a-zA-Z\.-]+)@',
+            'lines' => 4,
+        ),
+        'files' => array(
+            'php' => array('spyc.php'),
+        ),
+    );
+    return $libraries;
+}
+
+/**
+ * Implements hook_menu()
+ */
+function nyccamp_partner_menu()
+{
+    $items = array();
+    $items["partner"] = array(
+        "title" => "Become A Partner",
+        "page callback" => "nyccamp_partner_partner",
+        "type" => MENU_NORMAL_ITEM,
+        "menu_name" => "main-menu",
+        "access callback" => TRUE,
+    );
+
+    return $items;
+}
+
+function nyccamp_partner_partner()
+{
+    // Set title and add css for quick styling
+    drupal_set_title("Become A NYC Camp Partner");
+    drupal_add_css(drupal_get_path("module", "nyccamp_partner") . "/css/nyccamp_partner.css");
+
+    return array(
+        "tier_partnerships" => nyccamp_partner_tier_table(),
+    );
+}
+
+
+function nyccamp_partner_tier_table()
+{
+    $header_names = array(
+        "Partnership Option", "Website", "Program",
+        "Sinage", "Partner Pavilion", "Social Media",
+        "Keynote", "Swag", "Other", "Quantity Remaining",
+    );
+    $header_row = nyccamp_partner_generate_headerrows($header_names);
+    $header = $header_row["header"];
+    $rows = $header_row["rows"];
+
+    // @TODO: Place this into an function that can create the necessary table rows.
+    // nyccamp_partner_create_partnership_option($partnership_type, $benefit_fields)
+    $benefits = array(
+        "field_website_benefit",
+        "field_program_benefit",
+        "field_signage_benefit",
+        "field_partner_pavilion_benefit",
+        "field_social_media_benefit",
+        "field_keynote_benefit",
+        "field_swag_benefit",
+        "field_other_benefit",
+    );
+    $benefit_rows = nyccamp_partner_create_partnership_option("tier_partnership", $benefits);
+    $rows = array_merge($rows, $benefit_rows);
+
+    return array(
+        "#theme" => "table",
+        "#header" => $header,
+        "#rows" => $rows,
+        "#attributes" => array("class" => array("partnership-options")),
+    );
+}
+
+/**
+ * Creates the rows for a partnership options table. Returns an array of the rows for the table.
+ * @param $partnership_type The type of the commerce product this table will be populated with
+ * @param $benefit_fields An array of the benefit field names to map to rows.
+ * @return $rows An array of table ready rows;
+ */
+function nyccamp_partner_create_partnership_option($partnership_type, $benefit_fields)
+{
+    $rows = array();
+    $partnership_options = nyccamp_partner_load_partnership_options($partnership_type);
+    foreach($partnership_options as $key => $option)
+    {
+        $owrapper = entity_metadata_wrapper("commerce_product", $option);
+        // Commerce stores the price in a weird way, use the provided formating function
+        $price_raw = $owrapper->commerce_price->value();
+        $price = commerce_currency_format($price_raw["amount"], $price_raw["currency_code"]);
+
+        // We use a data variable to hold the text gathered from benefits processing
+        $data = array();
+        foreach($benefit_fields as $benefit)
+        {
+            $benefit_field = $owrapper->$benefit->value();
+            $data[$benefit] = array();
+            if(!empty($benefit_field)) {
+                // Because there might be multiple entity references, we iterate over them.
+                foreach($benefit_field as $field)
+                {
+                    $data[$benefit][] = nyccamp_partner_extract_benefit($field);
+                }
+            } else {
+                $data[$benefit][] = "Not Applicable";
+            }
+        }
+        // Table rows
+        $rows[$key] = array(
+            array(
+                "data" => sprintf("%s<br>%s", $owrapper->title->value(), $price),
+                "class" => "partnership-option-title"
+            ),
+        );
+        foreach($benefit_fields as $benefit)
+        {
+            $rows[$key][] = array(
+                "data" => implode("<br>", $data[$benefit]),
+                "class" => "partnership-benefit",
+            );
+        }
+
+        $rows[$key][] = array(
+            "data" => sprintf("%d", $owrapper->commerce_stock->value()),
+            "class" => "partnership-benefit",
+        );
+
+        // Clear out the variables to ensure data isn't accidentally carried over to the next iteration
+        unset($data);
+    }
+
+    return $rows;
+
+}
+
+/**
+ * Takes an array of header items and generates a header with an initial row of more headers.
+ * @param $header_items array An array of header item names
+ * @return array An array keyed with header and rows, containing the header and row array for a table respectively.
+ */
+function nyccamp_partner_generate_headerrows($header_items)
+{
+    // Headers with classes to style appropriately
+    $header = array(
+        array(
+            "data" => "Tier Partnerships",
+            "class" => "partnership-option-header",
+            "colspan" => sizeof($header_items)
+        )
+    );
+    $header_row = array();
+    foreach($header_items as $item)
+    {
+        $header_row[] = array(
+                "data" => $item,
+                "header" => TRUE,
+                "class" => "partnership-headers",
+        );
+    }
+    $rows = array();
+    $rows[] = $header_row;
+
+    return array(
+        "header" => $header,
+        "rows" => $rows,
+    );
+}
+
+function nyccamp_partner_load_partnership_options($type = '')
+{
+    $query = new EntityFieldQuery();
+    $result = $query->entityCondition('entity_type', "commerce_product")
+        ->entityCondition('bundle', $type)
+        ->fieldOrderBy("field_view_order", "value")
+        ->execute();
+    if(isset($result["commerce_product"])) {
+        $product_ids = array_keys($result["commerce_product"]);
+        $options = entity_load("commerce_product", $product_ids);
+        return $options;
+    }
+}
+
+function nyccamp_partner_extract_benefit($benefit)
+{
+    $bwrapper = entity_metadata_wrapper("node", $benefit);
+    $return = "";
+    $return .= $bwrapper->field_benefit->value();
+    // @TODO: Determine if we actually need to print out the details part of the benefit.
+    if(!empty($bwrapper->field_details->value()) && FALSE) {
+        $return .= sprintf("<br>%s", $bwrapper->field_details->value());
+    }
+    return $return;
+}

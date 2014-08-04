@@ -1,0 +1,37 @@
+.partnership-options td {
+    vertical-align: top;
+    text-align: center;
+}
+.partnership-option-header {
+    background-color: #285e88;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.partnership-headers {
+    font-size: 14px;
+    width: 13%;
+    text-transform: none;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    vertical-align: top;
+}
+
+.partnership-option-title {
+    width: 16%;
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    padding: 15px;
+}
+
+.partnership-benefit {
+    width: 13%;
+    font-size: 11px;
+}

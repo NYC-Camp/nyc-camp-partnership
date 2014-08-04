@@ -1,0 +1,7 @@
+name = NYC Camp Partnership
+description = "Handles custom aspects of the NYC Camp Partnership App"
+core = 7.x
+package = NYC Camp
+
+dependencies[] = libraries (>=2.x)
+dependencies[] = entity
