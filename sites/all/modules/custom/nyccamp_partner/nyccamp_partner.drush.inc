@@ -39,7 +39,6 @@ function drush_update_partnerships()
 
     $library = libraries_load("spyc");
     $partnerships = Spyc::YAMLLoad(drupal_get_path("module", "nyccamp_partner") . '/partnerships.yml');
-    // print_r($partnerships);
     foreach($partnerships as $partnership_type => $partnership_options)
     {
         foreach($partnership_options as $partnership_option_name => $partnership_option)
@@ -56,8 +55,14 @@ function drush_update_partnerships()
                             "currency_code" => "USD",
                         ));
                 $pwrapper->commerce_stock->set($partnership_option["stock"]);
+                if(array_key_exists("view_order", $partnership_option)) {
+                    $pwrapper->field_view_order->set($partnership_option["view_order"]);
+                }
+
+                // Sets the benefits for the partnership
                 foreach($benefit_types as $benefit_type)
                 {
+                    // Check to ensure the benefit is actually there
                     if(array_key_exists($benefit_type, $partnership_option)) {
                         $benefits = array();
                         foreach($partnership_option[$benefit_type] as $index => $benefit_key)

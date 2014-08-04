@@ -1,13 +1,15 @@
 ---
 tier_partnership:
-  level-one-conference-partner-3:
-    title: Conference Partner 3
+  level-one-conference-partner:
+    title: Conference Partner
     price: 1500000
     stock: 1
+    view_order: 1
   level-two-leading-partner:
     title: Leading Partner
     price: 500000
     stock: 3
+    view_order: 2
     program_benefit:
       - program1
     signage_benefit:
@@ -28,18 +30,22 @@ tier_partnership:
     title: Core Partner
     price: 275000
     stock: 5
+    view_order: 3
   level-four-contributing-partner:
     title: Contributing Partner
     price: 160000
     stock: 8
+    view_order: 4
   level-five-supporting-partner:
     title: Supporting Partner
     price: 80000
     stock: 7
+    view_order: 5
   level-six-community-partner:
     title: Community Partner
     price: 25000
     stock: 10
+    view_order: 6
 title_partnership:
   media-digipub-summit-sprint-partner:
     title: 'Media & Digital Publishing Summit + Sprint Partner'
