@@ -1,0 +1,4 @@
+name = My module
+description = "My Module"
+core = 7.x
+package = NYC Camp
