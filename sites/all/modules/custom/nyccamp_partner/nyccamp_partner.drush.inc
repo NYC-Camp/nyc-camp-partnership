@@ -38,7 +38,7 @@ function drush_update_partnerships()
     }
 
     $library = libraries_load("spyc");
-    $partnerships = Spyc::YAMLLoad(drupal_get_path("module", "nyccamp_partner") . '/partnerships.yml');
+    $partnerships = Spyc::YAMLLoad(drupal_get_path("module", "nyccamp_partner") . '/partnership-options/partnerships.yml');
     foreach($partnerships as $partnership_type => $partnership_options)
     {
         foreach($partnership_options as $partnership_option_name => $partnership_option)
@@ -102,7 +102,7 @@ function drush_update_benefits()
         return;
     }
     libraries_load("spyc");
-    $benefits = Spyc::YAMLLoad(drupal_get_path("module", "nyccamp_partner") . "/benefits.yml");
+    $benefits = Spyc::YAMLLoad(drupal_get_path("module", "nyccamp_partner") . "/partnership-options/benefits.yml");
     foreach($benefits as $benefit_type => $benefit_options)
     {
         foreach($benefit_options as $benefit_option_key => $benefit_option)
