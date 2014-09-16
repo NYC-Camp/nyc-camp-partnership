@@ -33,7 +33,7 @@ function drush_update_partnerships()
     );
     $lib_detect = libraries_detect("spyc");
     if(empty($lib_detect["installed"])) {
-        drush_log("Missing Spyc library.", "error");
+        // drush_log("Missing Spyc library.", "error");
         return;
     }
 
@@ -69,10 +69,10 @@ function drush_update_partnerships()
                         {
                             $benefit = nyccamp_partner_check_benefit($benefit_key, $benefit_type);
                             if($benefit == false) {
-                                drush_log(
-                                    sprintf("%s of type %s does not exist!", $benefit_key, $benefit_type),
-                                    "error"
-                                );
+                                // drush_log(
+                                    // sprintf("%s of type %s does not exist!", $benefit_key, $benefit_type),
+                                    // "error"
+                                // );
                                 continue;
                             }
                             $benefits[] = intval($benefit->nid);
@@ -82,13 +82,13 @@ function drush_update_partnerships()
                     }
                 }
                 $pwrapper->save();
-                drush_log(sprintf("%s created.\n", $partnership_option_name), "ok");
+                // drush_log(sprintf("%s created.\n", $partnership_option_name), "ok");
             } else {
-                drush_log(sprintf("Already Exists: %s", $partnership_option_name));
+                // drush_log(sprintf("Already Exists: %s", $partnership_option_name));
             }
         }
     }
-    drush_log("Partnership updates complete.", "success");
+    // drush_log("Partnership updates complete.", "success");
     // $example = commerce_product_load_by_sku("level-one-conference-partner-2");
     // print_r($example);
 
@@ -98,7 +98,7 @@ function drush_update_benefits()
 {
     $lib_detect = libraries_detect("spyc");
     if(empty($lib_detect["installed"])) {
-        drush_log("Missing Spyc library.", "error");
+        // drush_log("Missing Spyc library.", "error");
         return;
     }
     libraries_load("spyc");
@@ -116,13 +116,13 @@ function drush_update_benefits()
                     $bwrapper->field_details->set($benefit_option["details"]);
                 }
                 $bwrapper->save();
-                drush_log(sprintf("%s of type %s created.\n", $benefit_option_key, $benefit_type), "ok");
+                // drush_log(sprintf("%s of type %s created.\n", $benefit_option_key, $benefit_type), "ok");
             } else {
-                drush_log(sprintf("Already Exists: %s of type: %s", $benefit_option_key, $benefit_type));
+                // drush_log(sprintf("Already Exists: %s of type: %s", $benefit_option_key, $benefit_type));
             }
         }
     }
-    drush_log("Benefit updates complete.", "success");
+    // drush_log("Benefit updates complete.", "success");
 }
 
 /**

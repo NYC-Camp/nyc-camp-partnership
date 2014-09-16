@@ -35,7 +35,43 @@ function nyccamp_partner_menu()
         "access callback" => TRUE,
     );
 
+    $items["admin/config/content/partnerhips"] = array(
+        "title" => "Manage NYC Camp Partnerships",
+        "page callback" => "drupal_get_form",
+        "page arguments" => array('nyccamp_partner_config_form'),
+        "type" => MENU_NORMAL_ITEM,
+        "access arguments" => "administer site configuration",
+    );
+
     return $items;
+}
+
+function nyccamp_partner_config_form($form)
+{
+    $form['update-benefits'] = array(
+        '#type' => 'submit',
+        '#value' => t('Update Benefits'),
+        '#name' => 'update-benefits',
+    );
+    $form['update-partnerships'] = array(
+        '#type' => 'submit',
+        '#value' => t('Update Partnerships'),
+        '#name' => 'update-partnerships',
+    );
+    return $form;
+}
+
+function nyccamp_partner_config_form_submit($form, &$form_state)
+{
+    // dpm($form_state);
+    if($form_state['triggering_element']['#name'] == 'update-benefits') {
+        module_Load_include('inc', 'nyccamp_partner', 'nyccamp_partner.drush');
+        drush_update_benefits();
+    }
+    if($form_state['triggering_element']['#name'] == 'update-partnerships') {
+        module_Load_include('inc', 'nyccamp_partner', 'nyccamp_partner.drush');
+        drush_update_partnerships();
+    }
 }
 
 function nyccamp_partner_partner()
