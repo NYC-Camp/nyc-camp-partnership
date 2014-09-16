@@ -45,19 +45,22 @@ function nyccamp_partner_partner()
     drupal_add_css(drupal_get_path("module", "nyccamp_partner") . "/css/nyccamp_partner.css");
 
     return array(
-        "tier_partnerships" => nyccamp_partner_tier_table(),
+        "tier_partnerships" => nyccamp_partner_generate_table("Tier Partnership", "tier_partnership"),
+        "title_partnerships" => nyccamp_partner_generate_table("Title Partnership", "title_partnership"),
+        "other_partnerships" => nyccamp_partner_generate_table("Other Partnership", "partnership"),
+        "individual_partnerships" => nyccamp_partner_generate_table("Individual Partnership", "individual_partnership"),
     );
 }
 
 
-function nyccamp_partner_tier_table()
+function nyccamp_partner_generate_table($title, $partnership_type)
 {
     $header_names = array(
         "Partnership Option", "Website", "Program",
         "Sinage", "Partner Pavilion", "Social Media",
         "Keynote", "Swag", "Other", "Quantity Remaining",
     );
-    $header_row = nyccamp_partner_generate_headerrows($header_names);
+    $header_row = nyccamp_partner_generate_headerrows($header_names, $title);
     $header = $header_row["header"];
     $rows = $header_row["rows"];
 
@@ -73,7 +76,7 @@ function nyccamp_partner_tier_table()
         "field_swag_benefit",
         "field_other_benefit",
     );
-    $benefit_rows = nyccamp_partner_create_partnership_option("tier_partnership", $benefits);
+    $benefit_rows = nyccamp_partner_create_partnership_option($partnership_type, $benefits);
     $rows = array_merge($rows, $benefit_rows);
 
     return array(
@@ -83,6 +86,7 @@ function nyccamp_partner_tier_table()
         "#attributes" => array("class" => array("partnership-options")),
     );
 }
+
 
 /**
  * Creates the rows for a partnership options table. Returns an array of the rows for the table.
@@ -150,12 +154,12 @@ function nyccamp_partner_create_partnership_option($partnership_type, $benefit_f
  * @param $header_items array An array of header item names
  * @return array An array keyed with header and rows, containing the header and row array for a table respectively.
  */
-function nyccamp_partner_generate_headerrows($header_items)
+function nyccamp_partner_generate_headerrows($header_items, $title)
 {
     // Headers with classes to style appropriately
     $header = array(
         array(
-            "data" => "Tier Partnerships",
+            "data" => $title,
             "class" => "partnership-option-header",
             "colspan" => sizeof($header_items)
         )
