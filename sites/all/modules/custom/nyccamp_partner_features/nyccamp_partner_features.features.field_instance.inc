@@ -76,20 +76,448 @@ function nyccamp_partner_features_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'commerce_product-individual_partnership-commerce_stock'
-  $field_instances['commerce_product-individual_partnership-commerce_stock'] = array(
+  // Exported field_instance: 'commerce_product-individual_partnership-field_keynote_benefit'
+  $field_instances['commerce_product-individual_partnership-field_keynote_benefit'] = array(
     'bundle' => 'individual_partnership',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Keynote Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 9,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_keynote_benefit',
+    'label' => 'Keynote Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_other_benefit'
+  $field_instances['commerce_product-individual_partnership-field_other_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Other Benefit',
+    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => NULL,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_other_benefit',
+    'label' => 'Other Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_partner_pavilion_benefit'
+  $field_instances['commerce_product-individual_partnership-field_partner_pavilion_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Partner Pavilion Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_partner_pavilion_benefit',
+    'label' => 'Partner Pavilion Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_program_benefit'
+  $field_instances['commerce_product-individual_partnership-field_program_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Program Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_program_benefit',
+    'label' => 'Program Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_signage_benefit'
+  $field_instances['commerce_product-individual_partnership-field_signage_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Signage Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_signage_benefit',
+    'label' => 'Signage Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_social_media_benefit'
+  $field_instances['commerce_product-individual_partnership-field_social_media_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Social Media Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_social_media_benefit',
+    'label' => 'Social Media Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_summit_benefit'
+  $field_instances['commerce_product-individual_partnership-field_summit_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Summit Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_summit_benefit',
+    'label' => 'Summit Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_swag_benefit'
+  $field_instances['commerce_product-individual_partnership-field_swag_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Swag Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_swag_benefit',
+    'label' => 'Swag Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_view_order'
+  $field_instances['commerce_product-individual_partnership-field_view_order'] = array(
+    'bundle' => 'individual_partnership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -101,7 +529,7 @@ function nyccamp_partner_features_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
-        'weight' => 1,
+        'weight' => 11,
       ),
       'line_item' => array(
         'label' => 'above',
@@ -109,11 +537,17 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
-    'field_name' => 'commerce_stock',
-    'label' => 'Stock',
-    'required' => TRUE,
+    'field_name' => 'field_view_order',
+    'label' => 'View Order',
+    'required' => 0,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -122,10 +556,65 @@ function nyccamp_partner_features_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 36,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-individual_partnership-field_website_benefit'
+  $field_instances['commerce_product-individual_partnership-field_website_benefit'] = array(
+    'bundle' => 'individual_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Website Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_website_benefit',
+    'label' => 'Website Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
     ),
   );
 
@@ -195,7 +684,7 @@ function nyccamp_partner_features_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
@@ -228,6 +717,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'commerce_stock',
@@ -244,7 +739,545 @@ function nyccamp_partner_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 36,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_keynote_benefit'
+  $field_instances['commerce_product-partnership-field_keynote_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Keynote Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_keynote_benefit',
+    'label' => 'Keynote Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_other_benefit'
+  $field_instances['commerce_product-partnership-field_other_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Other Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_other_benefit',
+    'label' => 'Other Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_partner_pavilion_benefit'
+  $field_instances['commerce_product-partnership-field_partner_pavilion_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Partner Pavilion Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_partner_pavilion_benefit',
+    'label' => 'Partner Pavilion Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_program_benefit'
+  $field_instances['commerce_product-partnership-field_program_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Program Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_program_benefit',
+    'label' => 'Program Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_signage_benefit'
+  $field_instances['commerce_product-partnership-field_signage_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Signage Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_signage_benefit',
+    'label' => 'Signage Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_social_media_benefit'
+  $field_instances['commerce_product-partnership-field_social_media_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Social Media Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_social_media_benefit',
+    'label' => 'Social Media Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_summit_benefit'
+  $field_instances['commerce_product-partnership-field_summit_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Summit Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_summit_benefit',
+    'label' => 'Summit Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_swag_benefit'
+  $field_instances['commerce_product-partnership-field_swag_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Swag Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 9,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_swag_benefit',
+    'label' => 'Swag Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_view_order'
+  $field_instances['commerce_product-partnership-field_view_order'] = array(
+    'bundle' => 'partnership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 11,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_view_order',
+    'label' => 'View Order',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-partnership-field_website_benefit'
+  $field_instances['commerce_product-partnership-field_website_benefit'] = array(
+    'bundle' => 'partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Website Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_website_benefit',
+    'label' => 'Website Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
     ),
   );
 
@@ -347,6 +1380,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'commerce_stock',
@@ -389,6 +1428,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 8,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -442,6 +1487,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'field_other_benefit',
@@ -485,6 +1536,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 5,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -538,6 +1595,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'field_program_benefit',
@@ -581,6 +1644,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 3,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -634,6 +1703,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'field_social_media_benefit',
@@ -677,6 +1752,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 6,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -730,6 +1811,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'field_swag_benefit',
@@ -771,6 +1858,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 11,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -819,6 +1912,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'weight' => 4,
       ),
       'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -911,7 +2010,7 @@ function nyccamp_partner_features_field_default_field_instances() {
         'currency_code' => 'default',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
@@ -944,6 +2043,12 @@ function nyccamp_partner_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'commerce_product',
     'field_name' => 'commerce_stock',
@@ -960,7 +2065,593 @@ function nyccamp_partner_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 36,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-commerce_stock_override'
+  $field_instances['commerce_product-title_partnership-commerce_stock_override'] = array(
+    'bundle' => 'title_partnership',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => NULL,
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'commerce_stock_override',
+    'label' => 'Disable stock for this product',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => TRUE,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_keynote_benefit'
+  $field_instances['commerce_product-title_partnership-field_keynote_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Keynote Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 9,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_keynote_benefit',
+    'label' => 'Keynote Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_other_benefit'
+  $field_instances['commerce_product-title_partnership-field_other_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Other Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_other_benefit',
+    'label' => 'Other Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_partner_pavilion_benefit'
+  $field_instances['commerce_product-title_partnership-field_partner_pavilion_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Partner Pavilion Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_partner_pavilion_benefit',
+    'label' => 'Partner Pavilion Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_program_benefit'
+  $field_instances['commerce_product-title_partnership-field_program_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Program Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_program_benefit',
+    'label' => 'Program Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_signage_benefit'
+  $field_instances['commerce_product-title_partnership-field_signage_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Signage Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_signage_benefit',
+    'label' => 'Signage Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_social_media_benefit'
+  $field_instances['commerce_product-title_partnership-field_social_media_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Social Media Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_social_media_benefit',
+    'label' => 'Social Media Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_summit_benefit'
+  $field_instances['commerce_product-title_partnership-field_summit_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Summit Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_summit_benefit',
+    'label' => 'Summit Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_swag_benefit'
+  $field_instances['commerce_product-title_partnership-field_swag_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Swag Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_swag_benefit',
+    'label' => 'Swag Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_view_order'
+  $field_instances['commerce_product-title_partnership-field_view_order'] = array(
+    'bundle' => 'title_partnership',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 2,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_view_order',
+    'label' => 'View Order',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'commerce_product-title_partnership-field_website_benefit'
+  $field_instances['commerce_product-title_partnership-field_website_benefit'] = array(
+    'bundle' => 'title_partnership',
+    'commerce_cart_settings' => array(
+      'attribute_field' => 0,
+      'attribute_widget' => 'select',
+      'attribute_widget_title' => 'Website Benefit',
+    ),
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
+      ),
+      'line_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'node_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'commerce_product',
+    'field_name' => 'field_website_benefit',
+    'label' => 'Website Benefit',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 11,
     ),
   );
 
@@ -1688,6 +3379,7 @@ function nyccamp_partner_features_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Benefit');
   t('Details');
+  t('Disable stock for this product');
   t('Keynote Benefit');
   t('Other Benefit');
   t('Partner Pavilion Benefit');
