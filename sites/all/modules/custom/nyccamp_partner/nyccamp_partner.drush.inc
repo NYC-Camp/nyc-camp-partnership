@@ -54,7 +54,9 @@ function drush_update_partnerships()
                             "amount" => $partnership_option["price"],
                             "currency_code" => "USD",
                         ));
-                $pwrapper->commerce_stock->set($partnership_option["stock"]);
+                if(array_key_exists("stock", $partnership_option)) {
+                    $pwrapper->commerce_stock->set($partnership_option["stock"]);
+                }
                 if(array_key_exists("view_order", $partnership_option)) {
                     $pwrapper->field_view_order->set($partnership_option["view_order"]);
                 }
