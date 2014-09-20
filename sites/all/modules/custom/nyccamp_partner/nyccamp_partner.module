@@ -83,11 +83,49 @@ function nyccamp_partner_partner()
     return array(
         "tier_partnerships" => nyccamp_partner_generate_table("Tier Partnership", "tier_partnership"),
         // "title_partnerships" => nyccamp_partner_generate_table("Title Partnership", "title_partnership"),
+        "title_partnerships" => nyccamp_partner_title_partnerships(),
         "other_partnerships" => nyccamp_partner_generate_table("Other Partnership", "partnership"),
         "individual_partnerships" => nyccamp_partner_generate_table("Individual Partnership", "individual_partnership"),
     );
 }
 
+function nyccamp_partner_title_partnerships()
+{
+    dpm("hello");
+    return array(
+        "#theme" => "table",
+        '#header' => array(
+            array(
+                "data" => "Title Partnership",
+                "class" => "partnership-option-header",
+            )
+         ),
+        "#rows" => array(
+            array(
+<<<EOF
+<p>We will have a number of title partnership options for 2015!</p>
+<ul class="partnership-option-title">
+<li>Media + Digital Publishing Summit + Sprint Partner</li>
+<li>Non-Profit + NGO Summit + Sprint Partner</li>
+<li>Drupal 8 Core Summit + Sprint Partner</li>
+<li>Security + Privacy Summit + Sprint Partner</li>
+<li>DrupalNG Summit + Sprint Partner</li>
+<li>Higher Education Summit Partner</li>
+<li>DevOps Summit Partner</li>
+<li>Commerce Summit Partner</li>
+<li>Apps + Startup Summit Partner</li>
+<li>Training Summit Partner</li>
+<li>Twig Training + Sprint Partner</li>
+<li>Multilingual Sprint Partner</li>
+</ul>
+<p class="partnership-option-title">Price range: $1,750 - $3,500</p>
+
+If you are interested in any of these title partnerships, please contact us by e-mail (partnerships@nyccamp.org) or phone (212.203.8052). We would love to hear from you.
+EOF
+),
+        ),
+    );
+}
 
 function nyccamp_partner_generate_table($title, $partnership_type)
 {
