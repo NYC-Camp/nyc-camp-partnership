@@ -24,14 +24,17 @@
 }
 
 .partnership-option-title {
-    width: 16%;
     font-size: 14px;
     font-weight: bold;
     color: green;
-    padding: 15px;
 }
 
 .partnership-benefit {
     width: 13%;
     font-size: 11px;
+}
+
+td.partnership-option-title {
+    width: 16%;
+    padding: 15px;
 }
