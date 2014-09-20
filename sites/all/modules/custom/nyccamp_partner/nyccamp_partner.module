@@ -82,7 +82,7 @@ function nyccamp_partner_partner()
 
     return array(
         "tier_partnerships" => nyccamp_partner_generate_table("Tier Partnership", "tier_partnership"),
-        "title_partnerships" => nyccamp_partner_generate_table("Title Partnership", "title_partnership"),
+        // "title_partnerships" => nyccamp_partner_generate_table("Title Partnership", "title_partnership"),
         "other_partnerships" => nyccamp_partner_generate_table("Other Partnership", "partnership"),
         "individual_partnerships" => nyccamp_partner_generate_table("Individual Partnership", "individual_partnership"),
     );
