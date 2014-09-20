@@ -91,7 +91,6 @@ function nyccamp_partner_partner()
 
 function nyccamp_partner_title_partnerships()
 {
-    dpm("hello");
     return array(
         "#theme" => "table",
         '#header' => array(
