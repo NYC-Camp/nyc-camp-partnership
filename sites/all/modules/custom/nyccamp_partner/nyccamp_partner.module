@@ -131,7 +131,8 @@ function nyccamp_partner_generate_table($title, $partnership_type)
     $header_names = array(
         "Partnership Option", "Website", "Program",
         "Sinage", "Partner Pavilion", "Social Media",
-        "Keynote", "Swag", "Other", "Quantity Remaining",
+        "Keynote", "Swag", "Other",
+        // "Quantity Remaining",
     );
     $header_row = nyccamp_partner_generate_headerrows($header_names, $title);
     $header = $header_row["header"];
@@ -209,10 +210,10 @@ function nyccamp_partner_create_partnership_option($partnership_type, $benefit_f
             );
         }
 
-        $rows[$key][] = array(
-            "data" => sprintf("%d", $owrapper->commerce_stock->value()),
-            "class" => "partnership-benefit",
-        );
+        // $rows[$key][] = array(
+        //     "data" => sprintf("%d", $owrapper->commerce_stock->value()),
+        //     "class" => "partnership-benefit",
+        // );
 
         // Clear out the variables to ensure data isn't accidentally carried over to the next iteration
         unset($data);
